@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+                
+<validators>
+    <field name="insertMobileId">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Mobile Id is required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">true</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">10</param>
+            <message>Mobile Id is no more than 10 characters</message>
+        </field-validator>
+    </field>
+
+    <field name="insertDescription">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Description of mobile is required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">true</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">250</param>
+            <message>Description is no more than 250 characters</message>
+        </field-validator>
+    </field>
+    
+    <field name="insertMobileName">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Mobile Name is required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">true</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">20</param>
+            <message>Mobile Name is no more than 20 characters</message>
+        </field-validator>
+    </field>
+</validators>

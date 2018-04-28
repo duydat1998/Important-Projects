@@ -1,0 +1,105 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="">
+            <result>login.html</result>
+        </action>
+        
+        <action name="login" class="sample.struts2.LoginAction">
+            <result name="user">userPage.jsp</result>
+            <result name="manager">managerPage.jsp</result>
+            <result name="staff">staffPage.jsp</result>
+            <result name="fail" type="redirect">invalid.html</result>
+        </action>
+        
+        
+        <action name="searchStaff" class="sample.struts2.SearchStaffAction">
+            <result>staffPage.jsp</result>
+        </action>
+        
+        <action name="deleteRecord" class="sample.struts2.DeleteRecordAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">searchStaff</param>
+                <param name="searchId">${searchId}</param>
+                <param name="searchName">${searchName}</param>
+            </result>
+            <result name="fail">deleteError.html</result>
+        </action>
+        
+        <action name="updateStaff" class="sample.struts2.UpdateStaffAction">
+            <exception-mapping exception="java.sql.SQLException" result="input"/>
+            <exception-mapping exception="java.lang.NumberFormatException" result="input"/>
+            <result name="success" type="redirectAction">
+                <param name="actionName">searchStaff</param>
+                <param name="searchId">${searchId}</param>
+                <param name="searchName">${searchName}</param>
+            </result>
+            <result name="fail">updateError.html</result>
+            <result name="input" type="redirectAction">
+                <param name="actionName">searchStaff</param>
+                <param name="searchId">${searchId}</param>
+                <param name="searchName">${searchName}</param>
+            </result>
+        </action>
+        
+        <action name="logout" class="sample.struts2.LogoutAction">
+            <result>login.html</result>
+        </action>
+        
+        <action name="insert" class="sample.struts2.InsertAction">
+            <exception-mapping exception="java.sql.SQLException" result="input"/>
+            <result name="success">staffInsertPage.jsp</result>
+            <result name="fail">insertError.html</result>
+            <result name="input">staffInsertPage.jsp</result>
+        </action>
+        
+        <action name="insertPage">
+            <result>staffInsertPage.jsp</result>
+        </action>
+        
+        <action name="staffPage">
+            <result>staffPage.jsp</result>
+        </action>
+        
+        <action name="searchUser" class="sample.struts2.SearchUserAction">
+            <exception-mapping exception="java.lang.NumberFormatException" result="success"/>
+            <result name="success">userPage.jsp</result>
+        </action>
+        <action name="addToCart" class="sample.struts2.AddToCartAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">searchUser</param>
+                <param name="minPrice">${minPrice}</param>
+                <param name="maxPrice">${maxPrice}</param>
+                <param name="successMsg">${successMsg}</param>
+            </result>
+        </action>
+        
+        <action name="userPage">
+            <result>userPage.jsp</result>
+        </action>
+        
+        <action name="addMore">
+            <result>userPage.jsp</result>
+        </action>
+        <action name="try">
+            <result>login.html</result>
+        </action>
+        <action name="viewCart">
+            <result>viewCart.jsp</result>
+        </action>
+        
+        <action name="checkOut" class="sample.struts2.CheckOutAction">
+            <result name="success">userPage.jsp</result>
+            <result name="fail">storeError.html</result>
+        </action>
+        
+        <action name="removeItem" class="sample.struts2.RemoveItemAction">
+            <result>viewCart.jsp</result>
+        </action>
+        
+    </package>
+</struts>
