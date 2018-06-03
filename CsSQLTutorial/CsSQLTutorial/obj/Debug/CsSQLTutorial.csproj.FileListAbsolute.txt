@@ -1,0 +1,6 @@
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\bin\Debug\CsSQLTutorial.exe
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\bin\Debug\CsSQLTutorial.pdb
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\obj\Debug\CsSQLTutorial.csprojResolveAssemblyReference.cache
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\obj\Debug\CsSQLTutorial.csproj.CoreCompileInputs.cache
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\obj\Debug\CsSQLTutorial.exe
+D:\Studying\A_SUMMER2018-PRN292 C#\Demo\CsSQLTutorial\CsSQLTutorial\obj\Debug\CsSQLTutorial.pdb
